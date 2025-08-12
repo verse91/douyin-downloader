@@ -1,0 +1,1039 @@
+<!doctype html>
+<html>
+  <head>
+    <script data-sdk-glue-in="pre-handler" nonce="argus-csp-token">
+      !function () {
+        var e = "1243", t = "16720";
+        function n() {
+          try {
+            var n = "gfkadpd",
+              o = e + "," + t,
+              i = function (e) {
+                for (var t = document.cookie.split(";"), n = 0; n < t.length; n++) {
+                  var o = t[n].trim();
+                  if (o.startsWith(e + "=")) return o.substring(e.length + 1)
+                }
+                return null
+              }(n);
+            if (i) {
+              if (-1 != i.indexOf(o)) return;
+              o += "|" + i
+            }
+            document.cookie = n + "=" + o + ";expires=" + new Date((new Date).getTime() + 3 * 24 * 60 * 60 * 1e3).toUTCString() + "; path=/; SameSite=None; Secure;"
+          } catch (e) { }
+        }
+        window.__t_version = 'AOSdCc';
+        var o = function (n, o, i, a) {
+          if (Math.ceil(100 * Math.random()) <= 100 * o) {
+            var r = {
+                ev_type: "batch",
+                list: [{
+                  ev_type: "custom",
+                  payload: {
+                    name: "sdk_glue_load",
+                    type: "event",
+                    metrics: {},
+                    categories: {
+                      sdk_glue_load_status: n,
+                      sdk_glue_load_err_src: i,
+                      payload_bdms_aid: e,
+                      payload_bdms_page_id: t,
+                      duration: a
+                    }
+                  },
+                  common: {
+                    context: {
+                      ctx_bdms_aid: e,
+                      ctx_bdms_page_id: t
+                    },
+                    bid: "web_bdms_cn",
+                    pid: window.location.pathname,
+                    view_id: "/_1",
+                    user_id: "",
+                    session_id: "0-a-1-2-c",
+                    release: "",
+                    env: "production",
+                    url: window.location.href,
+                    timestamp: +new Date,
+                    sdk_version: "1.6.1",
+                    sdk_name: "SDK_SLARDAR_WEB"
+                  }
+                }]
+              },
+              d = new XMLHttpRequest;
+            d.open("POST", "https://mon.zijieapi.com/monitor_browser/collect/batch/?biz_id=web_bdms_cn", !0),
+              d.setRequestHeader("Content-type", "application/json"),
+              d.send(JSON.stringify(r))
+          }
+        };
+        !function () {
+          try {
+            n(),
+              document.cookie = "wdglgl=; expires=Mon, 20 Sep 2010 00:00:00 UTC; path=/;",
+              o("before_load", .001, "", "")
+          } catch (e) { }
+          var e = performance.now();
+          window.addEventListener("error", (function (t) {
+            try {
+              var n = t.target || t.srcElement;
+              if (n instanceof HTMLElement && "SCRIPT" == n.nodeName)
+                if (-1 != (n.src || "").indexOf("sdk-glue")) {
+                  var i = (performance.now() - e).toFixed(2);
+                  a = i,
+                    document.cookie = "wdglgl=; expires=Mon, 20 Sep 2010 00:00:00 UTC; path=/;",
+                    document.cookie = "wdglgl=" + a + "; expires=" + new Date((new Date).getTime() + 3 * 24 * 60 * 60 * 1e3).toUTCString() + "; path=/; SameSite=None; Secure;",
+                    o("load_error", 1, n.src, i)
+                }
+            } catch (e) { }
+            var a
+          }), !0),
+            window.__glue_t = +new Date
+        }()
+      }();
+    </script>
+    <script nonce="argus-csp-token" data-dt="RfDZYq" src="https://lf-c-flwb.bytetos.com/obj/rc-client-security/web/glue/1.0.0.65/sdk-glue.js"></script>
+    <script nonce="argus-csp-token">
+      ; (function () {
+        var sdkInfo = {
+          csrf: {
+            init: function (options) { window.secsdk.csrf.setOptions(options) },
+            isLoaded: function () { return !!window.secsdk },
+            srcList: [
+              "https://lf1-cdn-tos.bytegoofy.com/obj/goofy/secsdk/secsdk-lastest.umd.js",
+              "https://lf3-cdn-tos.bytegoofy.com/obj/goofy/secsdk/secsdk-lastest.umd.js",
+              "https://lf6-cdn-tos.bytegoofy.com/obj/goofy/secsdk/secsdk-lastest.umd.js"
+            ],
+          },
+          bdms: {
+            init: function (options) { window.bdms.init(options) },
+            isLoaded: function () { return !!window.bdms },
+            srcList: [
+              "https://lf-c-flwb.bytetos.com/obj/rc-client-security/web/dn/1.0.2.0-alpha.5/bdms.NVI6Q9.js"
+            ],
+          },
+          verifyCenter: {
+            init: function (options) { window.TTGCaptcha.init(options) },
+            isLoaded: function () { return !!window.TTGCaptcha },
+            srcList: [
+              "https://lf-rc1.yhgfb-cn-static.com/obj/rc-verifycenter/sec_sdk_build/4.0.10/captcha/index.js",
+              "https://lf-rc2.yhgfb-cn-static.com/obj/rc-verifycenter/sec_sdk_build/4.0.10/captcha/index.js"
+            ],
+          }
+        };
+        if (window._SdkGlueInit) {
+          window._SdkGlueInit({
+            bdms: {
+              "_0xffe": "uee4cI",
+              "aid": 1243,
+              "ddrt": 3,
+              "pageId": 16720,
+              "paths": { "include": ["/aweme/v1", "/aweme/v2", "/web/api"] }
+            },
+            self: { aid: 1243, pageId: 16720 }
+          }, sdkInfo);
+        }
+      })()
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="layoutmode" content="standard">
+    <meta name="imagemode" content="force">
+    <meta name="wap-font-scale" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <link href="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/css/video.ffab248a.css"
+      rel="stylesheet" crossorigin="anonymous">
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer">
+      !function () {
+        "use strict";
+        var e, t, n, r, i, a, o, d, u = {}, c = {};
+        function f(e) {
+          var t = c[e];
+          if (void 0 !== t) return t.exports;
+          var n = c[e] = { id: e, loaded: !1, exports: {} };
+          return u[e].call(n.exports, n, n.exports, f), n.loaded = !0, n.exports
+        }
+        if (f.m = u, f.n = function (e) {
+          var t = e && e.__esModule ? function () { return e.default } : function () { return e };
+          return f.d(t, { a: t }), t
+        }, t = Object.getPrototypeOf ? function (e) { return Object.getPrototypeOf(e) } : function (e) { return e.__proto__ }, f.t = function (n, r) {
+          if (1 & r && (n = this(n)), 8 & r || "object" == typeof n && n && (4 & r && n.__esModule || 16 & r && "function" == typeof n.then)) return n;
+          var i = Object.create(null);
+          f.r(i);
+          var a = {};
+          e = e || [null, t({}), t([]), t(t)];
+          for (var o = 2 & r && n; "object" == typeof o && !~e.indexOf(o); o = t(o)) Object.getOwnPropertyNames(o).forEach((function (e) { a[e] = function () { return n[e] } }));
+          return a.default = function () { return n }, f.d(i, a), i
+        }, f.d = function (e, t) { for (var n in t) f.o(t, n) && !f.o(e, n) && Object.defineProperty(e, n, { enumerable: !0, get: t[n] }) }, f.f = {}, f.e = function (e) { return Promise.all(Object.keys(f.f).reduce((function (t, n) { return f.f[n](e, t), t }), [])) }, f.u = function (e) {
+          return "9737" === e ? "static/js/9737.b73764cc.js" : "6430" === e ? "static/js/6430.60f91d70.js" : "static/js/async/" + ({
+            1016: "mix_(id)/page",
+            1519: "sticker_page",
+            1743: "mv_template_(id)/page",
+            2005: "VideoMEssage",
+            2191: "challenge_page",
+            2513: "user_(id)/page",
+            2616: "music_page",
+            276: "delightdesign_h5",
+            3981: "note_page",
+            4112: "playlet_page",
+            4628: "video_page",
+            4647: "mix_page",
+            4748: "user_page",
+            5102: "sticker_(id)/page",
+            54: "challenge_(id)/page",
+            5404: "playlet_(id)/page",
+            6576: "slides_(id)/page",
+            6684: "note_(id)/page",
+            6764: "slides_page",
+            6818: "group_(id)/page",
+            7263: "musicplaylist_page",
+            7590: "mv_template_page",
+            7989: "billboard_page",
+            8317: "music_(id)/page",
+            8318: "byted-lina-douyin-search-comment-board",
+            9166: "group_page",
+            944: "trends_page",
+            9706: "musicplaylist_(id)/page",
+            9826: "AdaptLoginHeader",
+            9973: "video_(id)/page"
+          }[e] || e) + "." + {
+              1016: "d659c19a",
+              1519: "086ae736",
+              1743: "29f16455",
+              1865: "c6891332",
+              2005: "1b3c1c4d",
+              2191: "791d9d23",
+              2309: "67f4a6cd",
+              2513: "2005c9a7",
+              2616: "f270b13c",
+              276: "af523ec8",
+              3981: "49e11918",
+              4112: "85aeac8e",
+              4628: "c003bb0e",
+              4647: "d941a0e0",
+              4748: "153ffca7",
+              5102: "e82039bc",
+              5118: "6d3cc179",
+              54: "d1ea76f1",
+              5404: "ee81f2cd",
+              6576: "54dc72d1",
+              6684: "ab868254",
+              6764: "b88dd8e3",
+              6818: "443419b1",
+              7263: "5e55f39f",
+              7431: "df225ec9",
+              7590: "2467ce9e",
+              7989: "d5a4a5ee",
+              8317: "84980904",
+              8318: "8de5e7b6",
+              9166: "b5407859",
+              9402: "17e5bf3c",
+              944: "069f42ad",
+              9706: "ab109196",
+              9826: "9c0fe5b9",
+              9973: "d9187e0b"
+            }[e] + ".js"
+        }, f.miniCssF = function (e) {
+          return "static/css/async/" + {
+            1016: "mix_(id)/page",
+            1519: "sticker_page",
+            1743: "mv_template_(id)/page",
+            2005: "VideoMEssage",
+            2191: "challenge_page",
+            2513: "user_(id)/page",
+            2616: "music_page",
+            276: "delightdesign_h5",
+            3981: "note_page",
+            4112: "playlet_page",
+            4628: "video_page",
+            4647: "mix_page",
+            4748: "user_page",
+            5102: "sticker_(id)/page",
+            54: "challenge_(id)/page",
+            5404: "playlet_(id)/page",
+            6576: "slides_(id)/page",
+            6684: "note_(id)/page",
+            6764: "slides_page",
+            6818: "group_(id)/page",
+            7263: "musicplaylist_page",
+            7590: "mv_template_page",
+            7989: "billboard_page",
+            8317: "music_(id)/page",
+            8318: "byted-lina-douyin-search-comment-board",
+            9166: "group_page",
+            944: "trends_page",
+            9706: "musicplaylist_(id)/page",
+            9826: "AdaptLoginHeader",
+            9973: "video_(id)/page"
+          }[e] + "." + {
+              1016: "c1fef139",
+              1519: "e7f49a7a",
+              1743: "71e43fef",
+              2005: "8703413a",
+              2191: "e7f49a7a",
+              2513: "685d99f1",
+              2616: "e7f49a7a",
+              276: "e15c91c0",
+              3981: "e7f49a7a",
+              4112: "e7f49a7a",
+              4628: "e7f49a7a",
+              4647: "e7f49a7a",
+              4748: "e7f49a7a",
+              5102: "78cc7d9b",
+              54: "1a5d1402",
+              5404: "157b0e6b",
+              6576: "8e64aecf",
+              6684: "8af06bc3",
+              6764: "e7f49a7a",
+              6818: "e8855a97",
+              7263: "e7f49a7a",
+              7590: "e7f49a7a",
+              7989: "ca67a954",
+              8317: "85442655",
+              8318: "db235d74",
+              9166: "e7f49a7a",
+              944: "8c0acce2",
+              9706: "2050908b",
+              9826: "1620cea5",
+              9973: "8e074056"
+            }[e] + ".css"
+        }, f.h = function () { return "c8c386e1bafa64f6" }, f.g = function () {
+          if ("object" == typeof globalThis) return globalThis;
+          try { return this || Function("return this")() } catch (e) {
+            if ("object" == typeof window) return window
+          }
+        }(), f.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, n = {}, r = "douyin_ug_edenx:", f.l = function (e, t, i, a) {
+          if (n[e]) n[e].push(t);
+          else {
+            if (void 0 !== i)
+              for (var o, d, u = document.getElementsByTagName("script"), c = 0; c < u.length; c++) {
+                var l = u[c];
+                if (l.getAttribute("src") == e || l.getAttribute("data-webpack") == r + i) { o = l; break }
+              }
+            o || (d = !0, (o = document.createElement("script")).charset = "utf-8", o.timeout = 120, f.nc && o.setAttribute("nonce", f.nc), o.setAttribute("data-webpack", r + i), o.src = e, 0 !== o.src.indexOf(window.location.origin + "/") && (o.crossOrigin = "anonymous")),
+              n[e] = [t];
+            var s = function (t, r) {
+              o.onerror = o.onload = null, clearTimeout(p);
+              var i = n[e];
+              if (delete n[e], o.parentNode && o.parentNode.removeChild(o), i && i.forEach((function (e) { return e(r) })), t) return t(r)
+            },
+              p = setTimeout(s.bind(null, void 0, { type: "timeout", target: o }), 12e4);
+            o.onerror = s.bind(null, o.onerror), o.onload = s.bind(null, o.onload), d && document.head.appendChild(o)
+          }
+        }, f.r = function (e) {
+          "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+            Object.defineProperty(e, "__esModule", { value: !0 })
+        }, f.nmd = function (e) { return e.paths = [], e.children || (e.children = []), e }, i = [], f.O = function (e, t, n, r) {
+          if (!t) {
+            var a = 1 / 0;
+            for (c = 0; c < i.length; c++) {
+              t = i[c][0], n = i[c][1], r = i[c][2];
+              for (var o = !0, d = 0; d < t.length; d++) (!1 & r || a >= r) && Object.keys(f.O).every((function (e) { return f.O[e](t[d]) })) ? t.splice(d--, 1) : (o = !1, r < a && (a = r));
+              if (o) {
+                i.splice(c--, 1);
+                var u = n();
+                void 0 !== u && (e = u)
+              }
+            }
+            return e
+          }
+          r = r || 0;
+          for (var c = i.length; c > 0 && i[c - 1][2] > r; c--) i[c] = i[c - 1];
+          i[c] = [t, n, r]
+        }, f.p = "//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/", f.rv = function () { return "1.3.12" }, "undefined" != typeof document) {
+          var l = { 8242: 0 };
+          f.f.miniCss = function (e, t) {
+            l[e] ? t.push(l[e]) : 0 !== l[e] && {
+              1016: 1, 2616: 1, 6576: 1, 4628: 1, 944: 1, 1519: 1, 9826: 1, 4112: 1, 9973: 1, 7590: 1, 9706: 1, 6818: 1, 7989: 1, 8318: 1, 7263: 1, 1743: 1, 2513: 1, 3981: 1, 4748: 1, 2191: 1, 8317: 1, 9166: 1, 2005: 1, 276: 1, 6764: 1, 5102: 1, 5404: 1, 6684: 1, 4647: 1, 54: 1
+            }[e] && t.push(l[e] = new Promise((function (t, n) {
+              var r = f.miniCssF(e), i = f.p + r;
+              if (function (e, t) {
+                for (var n = document.getElementsByTagName("link"), r = 0; r < n.length; r++) {
+                  var i = (o = n[r]).getAttribute("data-href") || o.getAttribute("href");
+                  if ("stylesheet" === o.rel && (i === e || i === t)) return o
+                }
+                var a = document.getElementsByTagName("style");
+                for (r = 0; r < a.length; r++) {
+                  var o;
+                  if ((i = (o = a[r]).getAttribute("data-href")) === e || i === t) return o
+                }
+              }(r, i)) return t();
+              !function (e, t, n, r, i) {
+                var a = document.createElement("link");
+                a.rel = "stylesheet", a.type = "text/css", f.nc && (a.nonce = f.nc), a.onerror = a.onload = function (n) {
+                  if (a.onerror = a.onload = null, "load" === n.type) r();
+                  else {
+                    var o = n && ("load" === n.type ? "missing" : n.type),
+                      d = n && n.target && n.target.href || t,
+                      u = Error("Loading CSS chunk " + e + " failed.\n(" + d + ")");
+                    u.code = "CSS_CHUNK_LOAD_FAILED", u.type = o, u.request = d, a.parentNode && a.parentNode.removeChild(a), i(u)
+                  }
+                }, a.href = t, 0 !== a.href.indexOf(window.location.origin + "/") && (a.crossOrigin = "anonymous"), n ? n.parentNode.insertBefore(a, n.nextSibling) : document.head.appendChild(a)
+              }(e, i, null, t, n)
+            })).then((function () { l[e] = 0 }), (function (t) { throw delete l[e], t })))
+          }
+        }
+        a = { 8242: 0 }, f.f.j = function (e, t) {
+          var n = f.o(a, e) ? a[e] : void 0;
+          if (0 !== n)
+            if (n) t.push(n[2]);
+            else if (8242 != e) {
+              var r = new Promise((function (t, r) { n = a[e] = [t, r] }));
+              t.push(n[2] = r);
+              var i = f.p + f.u(e), o = Error();
+              f.l(i, (function (t) {
+                if (f.o(a, e) && (0 !== (n = a[e]) && (a[e] = void 0), n)) {
+                  var r = t && ("load" === t.type ? "missing" : t.type),
+                    i = t && t.target && t.target.src;
+                  o.message = "Loading chunk " + e + " failed.\n(" + r + ": " + i + ")", o.name = "ChunkLoadError", o.type = r, o.request = i, n[1](o)
+                }
+              }), "chunk-" + e, e)
+            } else a[e] = 0
+        }, f.O.j = function (e) { return 0 === a[e] }, o = function (e, t) {
+          var n, r, i = t[0], o = t[1], d = t[2], u = 0;
+          if (i.some((function (e) { return 0 !== a[e] }))) {
+            for (n in o) f.o(o, n) && (f.m[n] = o[n]);
+            if (d) var c = d(f)
+          }
+          for (e && e(t); u < i.length; u++) r = i[u], f.o(a, r) && a[r] && a[r][0](), a[r] = 0;
+          return f.O(c)
+        }, (d = self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).forEach(o.bind(null, 0)), d.push = o.bind(null, d.push.bind(d)), f.ruid = "bundler=rspack@1.3.12"
+      }()
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      ; (function () {
+        window._MODERNJS_ROUTE_MANIFEST = {
+          "routeAssets": {
+            "video": {
+              "chunkIds": ["8242", "3361", "2072", "2126", "2118", "5283", "9737", "9073", "8734"],
+              "assets": [
+                "static/js/lib-react.efc27c00.js",
+                "static/js/lib-axios.3babd39d.js",
+                "static/js/lib-polyfill.20a87603.js",
+                "static/js/lib-router.389e36f8.js",
+                "static/js/5283.109a7132.js",
+                "static/js/9737.b73764cc.js",
+                "static/js/9073.cddbb76e.js",
+                "static/js/video.34790b5b.js",
+                "static/css/video.ffab248a.css"
+              ],
+              "referenceCssAssets": ["static/css/video.ffab248a.css"]
+            },
+            "video_(id)/page": {
+              "chunkIds": ["7431", "9402", "5118", "2309", "9973"],
+              "assets": [
+                "static/js/async/7431.df225ec9.js",
+                "static/js/async/9402.17e5bf3c.js",
+                "static/js/async/5118.6d3cc179.js",
+                "static/js/async/2309.67f4a6cd.js",
+                "static/css/async/video_(id)/page.8e074056.css",
+                "static/js/async/video_(id)/page.d9187e0b.js"
+              ],
+              "referenceCssAssets": ["static/css/async/video_(id)/page.8e074056.css"]
+            },
+            "video_page": {
+              "chunkIds": ["4628"],
+              "assets": [
+                "static/js/async/video_page.c003bb0e.js",
+                "static/css/async/video_page.e7f49a7a.css"
+              ],
+              "referenceCssAssets": ["static/css/async/video_page.e7f49a7a.css"]
+            }
+          }
+        };
+      })();
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/lib-react.efc27c00.js"
+      crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/lib-axios.3babd39d.js"
+      crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/lib-polyfill.20a87603.js"
+      crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/lib-router.389e36f8.js"
+      crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/5283.109a7132.js"
+      crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/9737.b73764cc.js"
+      crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/9073.cddbb76e.js"
+      crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" defer="defer"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/video.34790b5b.js"
+      crossorigin="anonymous"></script>
+    <title data-react-helmet="true">
+      泸沽湖小落水银河星空  #跟着中国国家地理镜收山河 #一起去收集中国限 - 抖音
+    </title>
+    <link rel="dns-prefetch" href="//lf-douyin-mobile.bytecdn.com" />
+    <link rel="dns-prefetch" href="//lf-cdn-tos.bytescm.com" />
+    <link rel="dns-prefetch" href="//lf3-cdn-tos.bytescm.com" />
+    <link rel="dns-prefetch" href="//lf3-short.ibytedapm.com" />
+    <link rel="dns-prefetch" href="//lf3-short.bytegoofy.com" />
+    <link rel="dns-prefetch" href="//lf-c-flwb.bytetos.com" />
+    <link rel="dns-prefetch" href="//mon.snssdk.com" />
+    <link rel="dns-prefetch" href="//mcs.snssdk.com" />
+    <link rel="dns-prefetch" href="//sf1-cdn-tos.douyinstatic.com" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device" content="mobile" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="baidu-site-verification" content="szjdG38sKy" />
+    <link rel="shortcut icon"
+      href="https://sf1-cdn-tos.douyinstatic.com/obj/eden-cn/kpchkeh7upepld/fe_app_new/favicon_v2.ico"
+      type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed"
+      href="https://sf1-cdn-tos.douyinstatic.com/obj/eden-cn/kpchkeh7upepld/fe_app_new/logo_launcher_v2.png" />
+    <link rel="preload" crossorigin="anonymous" as="script" nonce="WD1uAczuK8oHuz88DTi6H"
+      href="https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.0/collect.js" />
+    <link rel="preload" crossorigin="anonymous" as="script" nonce="argus-csp-token"
+      href="https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js" />
+    <link rel="preload" crossorigin="anonymous" as="script" nonce="argus-csp-token"
+      href="https://lf-security.bytegoofy.com/obj/security-secsdk/runtime.js" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x5-orientation" content="portrait" />
+    <style>
+      a,
+      abbr,
+      acronym,
+      address,
+      applet,
+      article,
+      aside,
+      audio,
+      b,
+      big,
+      blockquote,
+      body,
+      canvas,
+      caption,
+      center,
+      cite,
+      code,
+      dd,
+      del,
+      details,
+      dfn,
+      div,
+      dl,
+      dt,
+      em,
+      embed,
+      fieldset,
+      figcaption,
+      figure,
+      footer,
+      form,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      header,
+      hgroup,
+      html,
+      i,
+      iframe,
+      img,
+      ins,
+      kbd,
+      label,
+      legend,
+      li,
+      mark,
+      menu,
+      nav,
+      object,
+      ol,
+      output,
+      p,
+      pre,
+      q,
+      ruby,
+      s,
+      samp,
+      section,
+      small,
+      span,
+      strike,
+      strong,
+      sub,
+      summary,
+      sup,
+      table,
+      tbody,
+      td,
+      tfoot,
+      th,
+      thead,
+      time,
+      tr,
+      tt,
+      u,
+      ul,
+      var,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block
+      }
+
+      body {
+        line-height: 1
+      }
+
+      ol,
+      ul {
+        list-style: none
+      }
+
+      blockquote,
+      q {
+        quotes: none
+      }
+
+      blockquote:after,
+      blockquote:before,
+      q:after,
+      q:before {
+        content: quot
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0
+      }
+
+      * {
+        box-sizing: border-box
+      }
+
+      html {
+        font-family: PingFang SC, system ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        text-rendering: optimizeLegibility
+      }
+    </style>
+    <script nonce="WD1uAczuK8oHuz88DTi6H"
+      src="https://lf-security.bytegoofy.com/obj/security-secsdk/runtime.js" project-id="207"
+      x-nonce="argus-csp-token"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      !function () {
+        function e(e) { return this.config = e, this }
+        "undefined" != typeof window && (e.prototype = {
+          reset: function () {
+            var e = this.config && this.config.baseline && !isNaN(this.config.baseline) ? this.config.baseline : 750,
+              t = document.documentElement.clientWidth > 750 ? 750 : document.documentElement.clientWidth,
+              n = t / e * 100;
+            t >= 750 ? (
+              document.documentElement.style.fontSize = "40px",
+              document.documentElement.style.setProperty("width", "375px"),
+              document.documentElement.style.setProperty("margin", "0 auto"),
+              document.documentElement.style.setProperty("background-color", "#f4f4f4")
+            ) : (
+              document.documentElement.style.fontSize = "".concat(n, "px"),
+              document.documentElement.style.removeProperty("width"),
+              document.documentElement.style.removeProperty("margin"),
+              document.documentElement.style.removeProperty("background-color")
+            )
+          }
+        }, window.Adapter = new e(window.ADAPTER_CONF || {}), window.Adapter.reset(), window.addEventListener("load", (function () { window.Adapter.reset() }), !0), window.addEventListener("pageshow", (function () {
+          var e = window.navigator.userAgent;
+          /android/i.test(e) && window.Adapter.reset()
+        }), !0), window.addEventListener("resize", (function () { window.Adapter.reset() }), !0))
+      }()
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      !function () {
+        function n(n) { document.documentElement.style.setProperty("--vh", window.innerHeight + "px") }
+        "undefined" != typeof window && (n(), window.addEventListener("load", (function () { n() }), !0), window.addEventListener("resize", (function () { n() }), !0))
+      }()
+    </script>
+    <link crossorigin="anonymous"
+      href="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/css/async/video_(id)/page.8e074056.css"
+      rel="stylesheet" />
+    <link data-react-helmet="true" rel="canonical" href="https://www.douyin.com/video/7525380501322911011" />
+    <meta data-react-helmet="true" name="description"
+      content="泸沽湖小落水银河星空  #跟着中国国家地理镜收山河 #一起去收集中国限量版地貌  #泸沽湖小落水村 - 骑驴到西藏于20250710发布在抖音，已经收获了745个喜欢，来抖音，记录美好生活！" />
+    <meta data-react-helmet="true" name="keywords" content="抖音,抖音短视频,抖音官网" />
+    <meta data-react-helmet="true" http-equiv="mobile-agent"
+      content="format=html5;url=https://m.douyin.com/share/video/7525380501322911011" />
+    <meta data-react-helmet="true" name="mobile-agent"
+      content="format=html5;url=https://m.douyin.com/share/video/7525380501322911011" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <div class="video-container horizontal-video">
+          <img
+            src="https://p26-sign.douyinpic.com/tos-cn-i-dy/a7a0136840ec4580ae7bbbd6a9ab065d~tplv-dy-resize-walign-adapt-aq:540:q75.webp?lk3s=138a59ce&amp;x-expires=1756202400&amp;x-signature=%2BQfWzruyOvIwXa11SlWTpG7%2BD3Q%3D&amp;from=327834062&amp;s=PackSourceEnum_DOUYIN_REFLOW&amp;se=false&amp;sc=cover&amp;biz_tag=aweme_video&amp;l=20250812183457A197702549BE19C61984"
+            class="poster" loading="eager" />
+          <div class="video-msg-container"></div>
+        </div>
+      </div>
+    </div>
+    <div id='douyin_reflow_abtest'
+      ssrabtest='{"reflow_video_page_optimize":"2","search_video_mark_abtest":"0","share_page_dark_mode_adaptation":"1","reflow_page_open_app_optimize":"4","reflow_page_auto_open_optimize":"0","reflow_to_featured_app":"1","select_pool_data":{"use_new_select_scope":0},"jx_label_display_position_list":["main","related_card"]}'>
+    </div>
+    <div id='douyin_reflow_location' location='{"isMainland":false,"country":"vn"}'></div>
+    <div id="douyin_reflow_token"
+      xsstoken="a215b46f2f10701d872615b316dc2cf41959e23c05b3bc493ef8ac844633fff10496421aecc1537cd59e692fe4764d06"></div>
+    <div id='douyin_reflow_tcc'
+      tccconfig='{"block_path_list":[],"delayed_open_download_millisecond":1000,"forbid_copy_board_list":{"ios_os_version":"16","scene_from":["click_schema_hwqs_cloud","qs_os_list","douyin_h5_flow","douyin_h5_search","ug_page_delivery"],"from_aid":["615883","2329"],"app":["douyin_search"],"app_name_android":[],"app_name_ios":[],"forbid_launch_method":"1"},"forbid_copy_board_operation":0,"forbid_schema_call_browser_app_list":["firefox"],"forbid_schema_call_scene_from_list":["click_schema_hwqs_cloud","qs_os_list","douyin_h5_flow","douyin_h5_search"],"forbid_ui_open_change_list":{"scene_from":["click_schema_hwqs_cloud","qs_os_list","douyin_h5_flow","douyin_h5_search","ug_page_delivery"],"from_aid":["615883"],"app":["douyin_search"],"app_name_android":[],"app_name_ios":[],"show_scroll_toast":[]},"forbid_ui_optimize_browser_app_list":["baidu"],"forbid_ui_optimize_scene_from_list":["click_schema_hwqs_cloud","qs_os_list","douyin_h5_flow"],"forbid_zlink_change_list":{"scene_from":["click_schema_hwqs_cloud","qs_os_list","douyin_h5_flow","douyin_h5_search","ug_page_delivery"],"from_aid":["615883","1349"],"app":["douyin_search","maya","new_maya"],"app_name_android":["baidu","weixin","qq","qqbrowser"],"app_name_ios":["baidu","weixin","qqbrowser","uc","quark","qq"]},"gov_domain_white_list_path":["/share/video/"],"overseas_config":{"is_oversea_download_switch":1,"effective_ratio":100,"is_popup_en_switch":0,"english_word_line1":"Watch¥Video.¥Have¥fun.","english_word_line2":"Be¥creative!","english_btn_word:":"Open¥Now","cn_word_line1":"记录美好生活","cn_word_line2":"","cn_btn_word":"现在打开","en_btn_text":"Get¥Douyin¥App","en_banner_open_text":"Get¥App","android_download_url":"https://z.douyin.com/dBkb1","ios_download_url":"https://z.douyin.com/dBkb1","btn_text_en_switch":1,"pop_up_enable_switch":0,"no_redirect_m_station_arr":["hk","mo"]},"qps_limit":20,"ssr_down_grade_csr":0,"token_encry_cooperation":{"switch":true,"block_ratio":1000,"post_list_relation_block_ratio":0,"fe_key":"douyin_reflow_token","new_fe_key":"e2rere3sb2rsvc","new_fe_key_ratio":0,"algorithm":[{"encry_algorithm":"aes-128-cbc","sk":"sykKwe59_q11peDD","block_size":16,"token_expire_time_millisecond":100000},{"encry_algorithm":"aes-128-cbc","sk":"sykKwe59_q11peDz","block_size":16,"token_expire_time_millisecond":100000,"algorithm_expire_time_millisecond":1717751102312}]}}'>
+    </div>
+    <div id='douyin_reflow_webId' webId="7537645616220112427" usercip="14.191.249.15"></div>
+    <div id="douyin_reflow_page"></div>
+    <script nonce="WD1uAczuK8oHuz88DTi6H"
+      src="https://privacy.zijieapi.com/api/web-cmp/sdk/?project_key=61566ccba19eeb6d"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      !function (n, t) {
+        if (n.LogAnalyticsObject = t, !n[t]) {
+          function c() { c.q.push(arguments) }
+          c.q = c.q || [], n[t] = c
+        }
+        n[t].l = +new Date
+      }(window, "collectEvent")
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" async=""
+      src="https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.0/collect.js" crossorigin="anonymous"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      !function (e, r, n, t, s, a, i, o, c, l, d, m, p, f) {
+        a = "precollect", i = "getAttribute", o = "addEventListener", l = function (e) {
+          (d = [].slice.call(arguments)).push(Date.now(), location.href), (e == a ? l.p.a : l.q).push(d)
+        }, l.q = [], l.p = { a: [] }, e[s] = l, (m = document.createElement("script")).src = n + "?bid=aweme_share&globalName=" + s, m.crossOrigin = n.indexOf("sdk-web") > 0 ? "anonymous" : "use-credentials", r.getElementsByTagName("head")[0].appendChild(m), o in e && (l.pcErr = function (r) {
+          r = r || e.event, (p = r.target || r.srcElement) instanceof Element || p instanceof HTMLElement ? p[i]("integrity") ? e[s](a, "sri", p[i]("href") || p[i]("src")) : e[s](a, "st", { tagName: p.tagName, url: p[i]("href") || p[i]("src") }) : e[s](a, "err", r.error || r.message)
+        }, l.pcRej = function (r) { r = r || e.event, e[s](a, "err", r.reason || r.detail && r.detail.reason) }, e[o]("error", l.pcErr, !0), e[o]("unhandledrejection", l.pcRej, !0)), "PerformanceLongTaskTiming" in e && ((f = l.pp = { entries: [] }).observer = new PerformanceObserver((function (e) { f.entries = f.entries.concat(e.getEntries()) })), f.observer.observe({ entryTypes: ["longtask", "largest-contentful-paint", "layout-shift"] }))
+      }(window, document, "https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js", 0, "slardar")
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      var regExpRes = location.pathname.match(/\/([^/?#]*)\/?$/);
+      window.slardar("context.merge", { item_id: regExpRes && regExpRes[1] }),
+        window.slardar("init", { bid: "aweme_share", pid: "video_ssr", release: "1.0.0.2449", env: "online" }),
+        window.slardar("on", "beforeSend", (function (e) {
+          e.ev_type && "performance" === e.ev_type && ("lcp" === e.payload.name && (console.log("[dev]\u6267\u884c=>slardarLCP", (new Date).getTime()), window.slardarLcp = (new Date).getTime()));
+          return e
+        }))
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json">
+      ["7431", "9402", "5118", "2309", "9973"]
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" id="__LOADABLE_REQUIRED_CHUNKS___ext" type="application/json">
+      { "namedChunks": ["video_(id)/page"] }
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" crossorigin="anonymous" defer="true"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/async/7431.df225ec9.js"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" crossorigin="anonymous" defer="true"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/async/9402.17e5bf3c.js"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" crossorigin="anonymous" defer="true"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/async/5118.6d3cc179.js"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" crossorigin="anonymous" defer="true"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/async/2309.67f4a6cd.js"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H" crossorigin="anonymous" defer="true"
+      src="//lf-douyin-mobile.bytecdn.com/obj/growth-douyin-share/growth/douyin_ug/static/js/async/video_(id)/page.d9187e0b.js"></script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      window._SSR_DATA = {
+        "data": {},
+        "context": {
+          "request": {
+            "params": {},
+            "query": {
+              "region": "VN",
+              "amp;mid": "7525380482746403647",
+              "amp;u_code": "-1",
+              "amp;did": "MS4wLjABAAAAvZfZRVqhGh6ryU2DJAnJ7bhfhSWSy6xM9wpY4M1ZHFfLtlx3ij92SH1eSqQrmUwA",
+              "amp;iid": "MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ",
+              "amp;with_sec_did": "1",
+              "amp;video_share_track_ver": "",
+              "amp;titleType": "title",
+              "amp;share_sign": "DLXFtSzzzFpSxbbCrKvRU1RDDaexZLkWJmOPOhlqn.g-",
+              "amp;share_version": "190500",
+              "amp;ts": "1754977875",
+              "amp;from_aid": "6383",
+              "amp;from_ssr": "1",
+              "amp;from": "web_code_link"
+            },
+            "pathname": "\u002Fshare\u002Fvideo\u002F7525380501322911011\u002F",
+            "host": "www.iesdouyin.com",
+            "url": "https:\u002F\u002Fwww.iesdouyin.com\u002Fshare\u002Fvideo\u002F7525380501322911011\u002F?region=VN&amp;mid=7525380482746403647&amp;u_code=-1&amp;did=MS4wLjABAAAAvZfZRVqhGh6ryU2DJAnJ7bhfhSWSy6xM9wpY4M1ZHFfLtlx3ij92SH1eSqQrmUwA&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=DLXFtSzzzFpSxbbCrKvRU1RDDaexZLkWJmOPOhlqn.g-&amp;share_version=190500&amp;ts=1754977875&amp;from_aid=6383&amp;from_ssr=1&amp;from=web_code_link"
+          },
+          "reporter": {}
+        },
+        "mode": "string",
+        "renderLevel": 2
+      }
+    </script>
+    <script nonce="WD1uAczuK8oHuz88DTi6H">
+      window._ROUTER_DATA = {
+        "loaderData": {
+          "video_layout": null,
+          "video_(id)\u002Fpage": {
+            "ua": "Mozilla\u002F5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit\u002F537.36 (KHTML, like Gecko) SamsungBrowser\u002F14.2 Chrome\u002F87.0.4280.141 Mobile Safari\u002F537.36",
+            "isSpider": false,
+            "webId": "7537645616220112427",
+            "query": {
+              "region": "VN",
+              "amp;mid": "7525380482746403647",
+              "amp;u_code": "-1",
+              "amp;did": "MS4wLjABAAAAvZfZRVqhGh6ryU2DJAnJ7bhfhSWSy6xM9wpY4M1ZHFfLtlx3ij92SH1eSqQrmUwA",
+              "amp;iid": "MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ",
+              "amp;with_sec_did": "1",
+              "amp;video_share_track_ver": "",
+              "amp;titleType": "title",
+              "amp;share_sign": "DLXFtSzzzFpSxbbCrKvRU1RDDaexZLkWJmOPOhlqn.g-",
+              "amp;share_version": "190500",
+              "amp;ts": "1754977875",
+              "amp;from_aid": "6383",
+              "amp;from_ssr": "1",
+              "amp;from": "web_code_link"
+            },
+            "renderInSSR": 1,
+            "lastPath": "7525380501322911011",
+            "appName": "safari",
+            "host": "www.iesdouyin.com",
+            "isNotSupportWebp": false,
+            "commonContext": {
+              "ua": "Mozilla\u002F5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit\u002F537.36 (KHTML, like Gecko) SamsungBrowser\u002F14.2 Chrome\u002F87.0.4280.141 Mobile Safari\u002F537.36",
+              "isSpider": false,
+              "webId": "7537645616220112427",
+              "query": {
+                "region": "VN",
+                "amp;mid": "7525380482746403647",
+                "amp;u_code": "-1",
+                "amp;did": "MS4wLjABAAAAvZfZRVqhGh6ryU2DJAnJ7bhfhSWSy6xM9wpY4M1ZHFfLtlx3ij92SH1eSqQrmUwA",
+                "amp;iid": "MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ",
+                "amp;with_sec_did": "1",
+                "amp;video_share_track_ver": "",
+                "amp;titleType": "title",
+                "amp;share_sign": "DLXFtSzzzFpSxbbCrKvRU1RDDaexZLkWJmOPOhlqn.g-",
+                "amp;share_version": "190500",
+                "amp;ts": "1754977875",
+                "amp;from_aid": "6383",
+                "amp;from_ssr": "1",
+                "amp;from": "web_code_link"
+              },
+              "renderInSSR": 1,
+              "lastPath": "7525380501322911011",
+              "appName": "safari",
+              "host": "www.iesdouyin.com",
+              "isNotSupportWebp": false
+            },
+            "videoInfoRes": {
+              "extra": {
+                "logid": "20250812183457A197702549BE19C61984",
+                "now": 1754994897265
+              },
+              "filter_list": [],
+              "is_oversea": 1,
+              "item_list": [
+                {
+                  "aweme_id": "7525380501322911011",
+                  "desc": "泸沽湖小落水银河星空  #跟着中国国家地理镜收山河 #一起去收集中国限量版地貌  #泸沽湖小落水村",
+                  "create_time": 1752139197,
+                  "author": {
+                    "short_id": "710162661",
+                    "nickname": "骑驴到西藏",
+                    "signature": "畅销书《星空摄影与后期》作者\n8KRAW签约摄影师\n微信：wzc554593239",
+                    "avatar_thumb": {
+                      "uri": "100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4",
+                      "url_list": [
+                        "https:\u002F\u002Fp26.douyinpic.com\u002Faweme\u002F100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp11.douyinpic.com\u002Faweme\u002F100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp3.douyinpic.com\u002Faweme\u002F100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062"
+                      ]
+                    },
+                    "avatar_medium": {
+                      "uri": "100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4",
+                      "url_list": [
+                        "https:\u002F\u002Fp26.douyinpic.com\u002Faweme\u002F100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp11.douyinpic.com\u002Faweme\u002F100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp3.douyinpic.com\u002Faweme\u002F100x100\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062"
+                      ]
+                    },
+                    "follow_status": 0,
+                    "following_count": 0,
+                    "favoriting_count": 0,
+                    "unique_id": "qilv919",
+                    "mplatform_followers_count": 0,
+                    "followers_detail": null,
+                    "platform_sync_info": null,
+                    "geofencing": null,
+                    "policy_version": null,
+                    "sec_uid": "MS4wLjABAAAAf6GH6xV2XnnCggpUKUa6ia1yE1VlXUCrsgty1rO4CXA",
+                    "type_label": null,
+                    "card_entries": null,
+                    "mix_info": null
+                  },
+                  "music": {
+                    "mid": "7525380482746403647",
+                    "title": "@骑驴到西藏创作的原声一骑驴到西藏",
+                    "author": "骑驴到西藏",
+                    "cover_hd": {
+                      "uri": "1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4",
+                      "url_list": [
+                        "https:\u002F\u002Fp3.douyinpic.com\u002Faweme\u002F1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp26.douyinpic.com\u002Faweme\u002F1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp11.douyinpic.com\u002Faweme\u002F1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062"
+                      ]
+                    },
+                    "cover_large": {
+                      "uri": "1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4",
+                      "url_list": [
+                        "https:\u002F\u002Fp3.douyinpic.com\u002Faweme\u002F1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp26.douyinpic.com\u002Faweme\u002F1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp11.douyinpic.com\u002Faweme\u002F1080x1080\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062"
+                      ]
+                    },
+                    "cover_medium": {
+                      "uri": "720x720\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4",
+                      "url_list": [
+                        "https:\u002F\u002Fp11.douyinpic.com\u002Faweme\u002F720x720\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp3.douyinpic.com\u002Faweme\u002F720x720\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062",
+                        "https:\u002F\u002Fp26.douyinpic.com\u002Faweme\u002F720x720\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4.jpeg?from=327834062"
+                      ]
+                    },
+                    "cover_thumb": {
+                      "uri": "168x168\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4",
+                      "url_list": [
+                        "https:\u002F\u002Fp3.douyinpic.com\u002Fimg\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4~c5_168x168.jpeg?from=327834062",
+                        "https:\u002F\u002Fp11.douyinpic.com\u002Fimg\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4~c5_168x168.jpeg?from=327834062",
+                        "https:\u002F\u002Fp26.douyinpic.com\u002Fimg\u002Faweme-avatar\u002Fmosaic-legacy_2ec110006c5f1ac6f0ea4~c5_168x168.jpeg?from=327834062"
+                      ]
+                    },
+                    "duration": 10,
+                    "position": null,
+                    "status": 1
+                  },
+                  "cha_list": null,
+                  "video": {
+                    "play_addr": {
+                      "uri": "v0200fg10000d1no9qvog65ikp9k6fr0",
+                      "url_list": [
+                        "https:\u002F\u002Faweme.snssdk.com\u002Faweme\u002Fv1\u002Fplaywm\u002F?video_id=v0200fg10000d1no9qvog65ikp9k6fr0&ratio=720p&line=0"
+                      ]
+                    },
+                    "cover": {
+                      "uri": "tos-cn-i-dy\u002Fa7a0136840ec4580ae7bbbd6a9ab065d",
+                      "url_list": [
+                        "https:\u002F\u002Fp26-sign.douyinpic.com\u002Ftos-cn-i-dy\u002Fa7a0136840ec4580ae7bbbd6a9ab065d~tplv-dy-resize-walign-adapt-aq:540:q75.webp?lk3s=138a59ce&x-expires=1756202400&x-signature=%2BQfWzruyOvIwXa11SlWTpG7%2BD3Q%3D&from=327834062&s=PackSourceEnum_DOUYIN_REFLOW&se=false&sc=cover&biz_tag=aweme_video&l=20250812183457A197702549BE19C61984",
+                        "https:\u002F\u002Fp3-sign.douyinpic.com\u002Ftos-cn-i-dy\u002Fa7a0136840ec4580ae7bbbd6a9ab065d~tplv-dy-resize-walign-adapt-aq:540:q75.webp?lk3s=138a59ce&x-expires=1756202400&x-signature=8ckkjU5rOioPdm6OUb%2B8GJDNBmE%3D&from=327834062&s=PackSourceEnum_DOUYIN_REFLOW&se=false&sc=cover&biz_tag=aweme_video&l=20250812183457A197702549BE19C61984",
+                        "https:\u002F\u002Fp11-sign.douyinpic.com\u002Ftos-cn-i-dy\u002Fa7a0136840ec4580ae7bbbd6a9ab065d~tplv-dy-resize-walign-adapt-aq:540:q75.webp?lk3s=138a59ce&x-expires=1756202400&x-signature=4C%2BMWbojMOUMVNwKiVg5%2FgVIpRA%3D&from=327834062&s=PackSourceEnum_DOUYIN_REFLOW&se=false&sc=cover&biz_tag=aweme_video&l=20250812183457A197702549BE19C61984",
+                        "https:\u002F\u002Fp26-sign.douyinpic.com\u002Ftos-cn-i-dy\u002Fa7a0136840ec4580ae7bbbd6a9ab065d~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1756202400&x-signature=wuy5sv1MAsRW8dOEKIzqqiEyfzc%3D&from=327834062&s=PackSourceEnum_DOUYIN_REFLOW&se=false&sc=cover&biz_tag=aweme_video&l=20250812183457A197702549BE19C61984"
+                      ]
+                    },
+                    "height": 2160,
+                    "width": 3840,
+                    "bit_rate": null,
+                    "big_thumbs": null
+                  },
+                  "statistics": {
+                    "aweme_id": "7525380501322911011",
+                    "comment_count": 52,
+                    "digg_count": 745,
+                    "play_count": 0,
+                    "share_count": 76,
+                    "collect_count": 75
+                  },
+                  "text_extra": [
+                    {
+                      "start": 12,
+                      "end": 25,
+                      "type": 1,
+                      "hashtag_name": "跟着中国国家地理镜收山河",
+                      "hashtag_id": 7511740090373114000
+                    },
+                    {
+                      "start": 26,
+                      "end": 39,
+                      "type": 1,
+                      "hashtag_name": "一起去收集中国限量版地貌",
+                      "hashtag_id": 7515717293243173000
+                    },
+                    {
+                      "start": 41,
+                      "end": 49,
+                      "type": 1,
+                      "hashtag_name": "泸沽湖小落水村",
+                      "hashtag_id": 1642725858558989
+                    }
+                  ],
+                  "video_labels": null,
+                  "aweme_type": 4,
+                  "image_infos": null,
+                  "risk_infos": {
+                    "warn": false,
+                    "type": 0,
+                    "content": "",
+                    "reflow_unplayable": 0
+                  },
+                  "comment_list": null,
+                  "geofencing": null,
+                  "video_text": null,
+                  "label_top_text": null,
+                  "promotions": null,
+                  "long_video": null,
+                  "images": null,
+                  "group_id_str": "7525380501322911011",
+                  "chapter_list": null,
+                  "interaction_stickers": null,
+                  "img_bitrate": null,
+                  "chapter_bar_color": null,
+                  "common_labels": null
+                }
+              ],
+              "status_code": 0
+            },
+            "itemId": "7525380501322911011",
+            "isVideoOptimize": true,
+            "openDirectGroup": "4",
+            "isVideoStyleOptimize": true,
+            "isButtonOptimize": true,
+            "isAutoOpenApp": true,
+            "darkModeAdaptation": true,
+            "serverToken": "",
+            "abParams": {
+              "reflow_video_page_optimize": "2",
+              "search_video_mark_abtest": "0",
+              "share_page_dark_mode_adaptation": "1",
+              "reflow_page_open_app_optimize": "4",
+              "reflow_page_auto_open_optimize": "0",
+              "reflow_to_featured_app": "1",
+              "select_pool_data": { "use_new_select_scope": 0 },
+              "jx_label_display_position_list": ["main", "related_card"]
+            }
+          }
+        },
+        "errors": null
+      }
+    </script>
+  </body>
+</html>
