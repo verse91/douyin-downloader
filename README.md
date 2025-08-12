@@ -1,6 +1,10 @@
 # Document
 
-This document explains how to extract the final video page from a Douyin (TikTok China) original link using `curl` to understand the code.
+This document explains how to extract the final video page from a Douyin (TikTok China) original link using `curl` to understand the code.  
+<div align="center">
+  <img width="2192" height="1128" alt="image" src="https://github.com/user-attachments/assets/790d14aa-13ff-4e96-9730-bc764a742419" />
+  <p><i>Douyin downloader/API with reponse as JSON</i></p>
+</div>
 
 > [!IMPORTANT]  
 > **This is for educational purposes only.**  
