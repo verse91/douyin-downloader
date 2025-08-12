@@ -1,3 +1,4 @@
+<!-- This is resp.html, but I changed it to resp.txt because I don't want the repo to show HTML as the main language :D, don't care about it -->
 <!doctype html>
 <html>
   <head>
