@@ -1,6 +1,6 @@
 # Document
 
-This document explains how to extract the final video page from a Douyin (TikTok China) short link using `curl`.
+This document explains how to extract the final video page from a Douyin (TikTok China) original link using `curl` to understand the code.
 
 > [!IMPORTANT]  
 > **This is for educational purposes only.**  
@@ -83,6 +83,8 @@ This document explains how to extract the final video page from a Douyin (TikTok
   }
 }
 ```
+> [!TIP]
+> Add more information like music, thumbnail, avatar, ... what you want from the response
 
 ## How to run
 
