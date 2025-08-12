@@ -1,6 +1,10 @@
-# Douyin Video Redirect Extraction Guide
+# Document
 
 This document explains how to extract the final video page from a Douyin (TikTok China) short link using `curl`.
+
+> [!IMPORTANT]  
+> **This is for educational purposes only.**  
+> **I do not take responsibility for anything you do.**
 
 ## Steps
 
@@ -17,11 +21,11 @@ This document explains how to extract the final video page from a Douyin (TikTok
      <a href="https://www.iesdouyin.com/share/video/7525380501322911011/?region=VN&amp;mid=7525380482746403647&amp;u_code=-1&amp;did=MS4wLjABAAAAvZfZRVqhGh6ryU2DJAnJ7bhfhSWSy6xM9wpY4M1ZHFfLtlx3ij92SH1eSqQrmUwA&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=DLXFtSzzzFpSxbbCrKvRU1RDDaexZLkWJmOPOhlqn.g-&amp;share_version=190500&amp;ts=1754977875&amp;from_aid=6383&amp;from_ssr=1&amp;from=web_code_link">Found</a>
      ```
 
-3. **Extract the redirect URL from the response**
+2. **Extract the redirect URL from the response**
 
    - Copy the URL from the `href` attribute in the `<a>` tag.
 
-4. **Send a request to the extracted URL**
+3. **Send a request to the extracted URL**
 
    ```bash
    curl -A "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36" "https://www.iesdouyin.com/share/video/7525380501322911011/?region=VN&mid=7525380482746403647&u_code=-1&did=MS4wLjABAAAAvZfZRVqhGh6ryU2DJAnJ7bhfhSWSy6xM9wpY4M1ZHFfLtlx3ij92SH1eSqQrmUwA&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=DLXFtSzzzFpSxbbCrKvRU1RDDaexZLkWJmOPOhlqn.g-&share_version=190500&ts=1754977875&from_aid=6383&from_ssr=1&from=web_code_link" > resp.html
@@ -29,9 +33,10 @@ This document explains how to extract the final video page from a Douyin (TikTok
 
    - This will save the response HTML to `resp.html`.
 
-5. **Process the response**
+4. **Process the response**
 
    - Open `resp.html` and extract the information you need (such as video URL, metadata, etc.).
+   - Check mine [here](https://github.com/verse91/douyin-downloader/blob/main/resp.txt).
 ## Result
 1. Video
 ```
@@ -79,9 +84,40 @@ This document explains how to extract the final video page from a Douyin (TikTok
 }
 ```
 
-## Notes
+## How to run
 
-- Always use a mobile User-Agent to avoid being blocked or served different content.
-- You can automate the extraction of the redirect URL using tools like `grep`, `sed`, or scripting languages.
+- Clone the repo
+```bash
+git clone https://github.com/verse91/douyin-downloader/
+cd /douyin-downloader/
+```
+
+- Init project
+  
+```go
+go mod init douyin
+```
+
+- Install packages
+
+```go
+go mod tidy
+```
+
+- Run
+
+```go
+go run .
+```
+
+- OR build
+
+```go
+go build .
+```
+
+> [!NOTE]  
+> Always use a mobile User-Agent to avoid being blocked or served different content.
+> You can automate the extraction of the redirect URL using tools like `grep`, `sed`, or scripting languages.
 
 ---
