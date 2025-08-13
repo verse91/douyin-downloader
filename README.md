@@ -6,7 +6,7 @@ This document explains how to extract the final video page from a Douyin (TikTok
   <p><i>Douyin downloader/API with reponse as JSON</i></p>
 </div>
 
-> [!IMPORTANT]  
+> [!WARNING]  
 > **This is for educational purposes only.**  
 > **I do not take responsibility for anything you do.**
 
