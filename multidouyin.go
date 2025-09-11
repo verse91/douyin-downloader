@@ -1,3 +1,5 @@
+//go:build ignore
+
 package main
 
 import (
@@ -27,7 +29,7 @@ type VideoInfo struct {
 	Share        int      `json:"share,omitempty"`
 	VideoDesc    string   `json:"video_desc,omitempty"`
 	CreateAt     string   `json:"create_at,omitempty"`
-	VideoURL     string   `json:"video_url,omitempty"`
+	DownloadURL  string   `json:"download_url,omitempty"`
 	ImageURLList []string `json:"img_url,omitempty"`
 }
 
@@ -106,7 +108,7 @@ func parseImgList(body string) []string {
 func getVideoInfo(url string) (*VideoInfo, *UserInfo, error) {
 	typeStr := "video"
 	var imgList []string
-	var videoURL string
+	var downloadURL string
 
 	body, err := doGet(url)
 	if err != nil {
@@ -118,7 +120,7 @@ func getVideoInfo(url string) (*VideoInfo, *UserInfo, error) {
 	if len(match) < 2 {
 		typeStr = "img"
 	} else {
-		videoURL = fmt.Sprintf(cVUrl, match[1])
+		downloadURL = fmt.Sprintf(cVUrl, match[1])
 	}
 	if typeStr == "img" {
 		imgList = parseImgList(body)
@@ -143,7 +145,7 @@ func getVideoInfo(url string) (*VideoInfo, *UserInfo, error) {
 
 	videoInfo := &VideoInfo{
 		Type:         typeStr,
-		VideoURL:     videoURL,
+		DownloadURL:  downloadURL,
 		ImageURLList: imgList,
 	}
 	userInfo := &UserInfo{}
