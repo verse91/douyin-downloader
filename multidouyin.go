@@ -1,12 +1,15 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"regexp"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/bytedance/sonic"
@@ -187,27 +190,117 @@ func getVideoInfo(url string) (*VideoInfo, *UserInfo, error) {
 	return videoInfo, userInfo, nil
 }
 
+// =====================Faster version but not in order========================
+// func main() {
+// 	file, err := os.Open("url.txt")
+// 	if err != nil {
+// 		fmt.Printf("Error opening file: %v\n", err)
+// 		return
+// 	}
+// 	defer file.Close()
+//
+// 	var urls []string
+// 	scanner := bufio.NewScanner(file)
+// 	for scanner.Scan() {
+// 		url := strings.TrimSpace(scanner.Text())
+// 		if url != "" {
+// 			urls = append(urls, url)
+// 		}
+// 	}
+// 	if err := scanner.Err(); err != nil {
+// 		fmt.Printf("Error reading file: %v\n", err)
+// 		return
+// 	}
+//
+// 	var wg sync.WaitGroup
+// 	sem := make(chan struct{}, 5) // tối đa 5 request cùng lúc
+//
+// 	for _, u := range urls {
+// 		wg.Add(1)
+// 		sem <- struct{}{} // chiếm slot
+// 		go func(url string) {
+// 			defer wg.Done()
+// 			defer func() { <-sem }() // trả slot
+//
+// 			videoInfo, userInfo, err := getVideoInfo(url)
+// 			if err != nil {
+// 				fmt.Printf("Error getting video info for %s: %v\n", url, err)
+// 				return
+// 			}
+// 			output := struct {
+// 				Media interface{} `json:"media"`
+// 				User  interface{} `json:"user"`
+// 			}{
+// 				Media: videoInfo,
+// 				User:  userInfo,
+// 			}
+// 			jsonData, err := sonic.MarshalIndent(output, "", "  ")
+// 			if err != nil {
+// 				fmt.Printf("Error marshaling JSON for %s: %v\n", url, err)
+// 				return
+// 			}
+// 			fmt.Println(string(jsonData))
+// 		}(u)
+// 	}
+//
+// 	wg.Wait()
+// }
+//
+
+// =====================Slower version but in order========================
 func main() {
-	// url := "https://v.douyin.com/AUVa3G-5QUE/"
-	url := "https://v.douyin.com/9N2HGwrYB70/"
-	videoInfo, userInfo, err := getVideoInfo(url)
+	file, err := os.Open("url.txt")
 	if err != nil {
-		fmt.Printf("Error getting video info: %v\n", err)
+		fmt.Printf("Error opening file: %v\n", err)
+		return
+	}
+	defer file.Close()
+
+	var urls []string
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		url := strings.TrimSpace(scanner.Text())
+		if url != "" {
+			urls = append(urls, url)
+		}
+	}
+	if err := scanner.Err(); err != nil {
+		fmt.Printf("Error reading file: %v\n", err)
 		return
 	}
 
-	output := struct {
+	type item struct {
 		Media interface{} `json:"media"`
 		User  interface{} `json:"user"`
-	}{
-		Media: videoInfo,
-		User:  userInfo,
 	}
 
-	resultJSON, err := sonic.MarshalIndent(output, "", "  ")
+	results := make([]item, len(urls))
+	var wg sync.WaitGroup
+	sem := make(chan struct{}, 5)
+
+	for i, u := range urls {
+		wg.Add(1)
+		sem <- struct{}{}
+		go func(idx int, url string) {
+			defer wg.Done()
+			defer func() { <-sem }()
+
+			videoInfo, userInfo, err := getVideoInfo(url)
+			if err != nil {
+				fmt.Printf("Error getting video info for %s: %v\n", url, err)
+				return
+			}
+			results[idx] = item{Media: videoInfo, User: userInfo}
+		}(i, u)
+	}
+
+	wg.Wait()
+
+	jsonData, err := sonic.MarshalIndent(results, "", "  ")
 	if err != nil {
-		fmt.Printf("Error marshaling output JSON: %v\n", err)
+		fmt.Printf("Error marshaling JSON: %v\n", err)
 		return
 	}
-	fmt.Println(string(resultJSON))
+
+	fmt.Println(string(jsonData))
 }
