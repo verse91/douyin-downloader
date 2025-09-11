@@ -18,6 +18,9 @@ This document explains how to extract the final video page from a Douyin (TikTok
      ```bash
      curl -A "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36" "https://v.douyin.com/9N2HGwrYB70/"
      ```
+> [!IMPORTANT]  
+> Always use a mobile User-Agent to avoid being blocked or served different content.
+> You can automate the extraction of the redirect URL using tools like `grep`, `sed`, or scripting languages.
 
    - This will return an HTML page containing a redirect link, for example:
 
@@ -90,40 +93,59 @@ This document explains how to extract the final video page from a Douyin (TikTok
 > [!TIP]
 > Add more information like music, thumbnail, avatar, ... what you want from the response
 
-## How to run
+## How to Run
 
-- Clone the repo
+1. **Clone the repository and enter the project folder**
+
 ```bash
 git clone https://github.com/verse91/douyin-downloader/
-cd /douyin-downloader/
+cd douyin-downloader/
 ```
 
-- Init project
-  
-```go
+2. **Initialize the Go project**
+
+```bash
 go mod init douyin
 ```
 
-- Install packages
+3. **Install required packages**
 
-```go
+```bash
 go mod tidy
 ```
 
-- Run
+4. **Run the program**
 
-```go
-go run .
+* **Single response mode**
+
+```bash
+go run douyin.go
 ```
 
-- OR build
+* **Multiple responses mode**
 
-```go
-go build .
+```bash
+go run multidouyin.go
 ```
-
 > [!NOTE]  
-> Always use a mobile User-Agent to avoid being blocked or served different content.
-> You can automate the extraction of the redirect URL using tools like `grep`, `sed`, or scripting languages.
+> For multiple responses, add video links to the `url.txt` file.
+> Example: [url.txt](https://github.com/verse91/douyin-downloader/blob/main/url.txt)
 
----
+5. **Or build the program**
+
+* **Single response**
+
+```bash
+go build -o a douyin.go
+./a
+```
+
+* **Multiple responses**
+
+```bash
+go build -o b multidouyin.go
+./b
+```
+> [!NOTE]  
+> For multiple responses, add video links to the `url.txt` file.
+> Example: [url.txt](https://github.com/verse91/douyin-downloader/blob/main/url.txt)
