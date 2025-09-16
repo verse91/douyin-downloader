@@ -230,11 +230,9 @@ func getVideoInfo(url string) (*VideoInfo, *UserInfo, error) {
 // 				return
 // 			}
 // 			output := struct {
-// 				Index int         `json:"id"`
 // 				Media interface{} `json:"media"`
 // 				User  interface{} `json:"user"`
 // 			}{
-// 				Index: i + 1,
 // 				Media: videoInfo,
 // 				User:  userInfo,
 // 			}
@@ -274,7 +272,7 @@ func main() {
 	}
 
 	type item struct {
-		Index int         `json:"id"`
+		Index int         `json:"index"`
 		Media interface{} `json:"media"`
 		User  interface{} `json:"user"`
 	}
