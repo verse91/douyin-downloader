@@ -272,6 +272,7 @@ func main() {
 	}
 
 	type item struct {
+		Index int         `json:"id"`
 		Media interface{} `json:"media"`
 		User  interface{} `json:"user"`
 	}
@@ -292,7 +293,7 @@ func main() {
 				fmt.Printf("Error getting video info for %s: %v\n", url, err)
 				return
 			}
-			results[idx] = item{Media: videoInfo, User: userInfo}
+			results[idx] = item{Index: idx + 1, Media: videoInfo, User: userInfo}
 		}(i, u)
 	}
 
